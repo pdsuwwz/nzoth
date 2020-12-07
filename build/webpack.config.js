@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: resolve('./lib'),
     publicPath: '/lib/',
-    filename: 'lib-main.js',
+    filename: 'lib-index.js',
     libraryTarget: 'umd'
   },
   module: {
