@@ -2,7 +2,7 @@
   "name": "nzoth",
   "version": "0.0.1",
   "main": "lib/lib-index.js",
-  "description": "🦑 Nzoth 是一只基于 Webpack 的用来快速构建出自己的 vue 组件库的基础模板框架",
+  "description": "🦑 Nzoth 是一个用于快速构建自己的 vue 组件库的基础模板框架",
   "author": "Wisdom <pdsu.wwz@foxmail.com>",
   "license": "MIT",
   "scripts": {
