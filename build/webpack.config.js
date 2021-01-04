@@ -8,6 +8,9 @@ function resolve (dir) {
   return path.join(process.cwd(), dir)
 }
 
+/**
+ * @type { webpack.Configuration }
+ */
 module.exports = {
   mode: 'production',
   entry: './src/main.js',
@@ -74,19 +77,30 @@ module.exports = {
         }
       },
       {
-        test: /\.(svg|otf|ttf|woff?|eot|gif|png|jpe?g)(\?\S*)?$/,
+        test: /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/,
         loader: 'url-loader',
         exclude: /node_modules/,
-        query: {
+        options: {
           limit: 10000,
           name: '[name].[hash:7].[ext]'
         }
       },
       {
-        test: /\.(png|jpg|gif|eot|woff|ttf|svg|webp|PNG)(\?\S*)?$/,
-        loader: 'file-loader',
+        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        exclude: /node_modules/,
         options: {
-          name: '[name].[ext]?[hash]'
+          limit: 10000,
+          name: '[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
+        loader: 'url-loader',
+        exclude: /node_modules/,
+        options: {
+          limit: 10000,
+          name: '[name].[hash:7].[ext]'
         }
       }
     ]
