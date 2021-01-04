@@ -1,13 +1,10 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const notifier = require('node-notifier')
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
-function resolve (dir) {
-  return path.join(process.cwd(), dir)
-}
+const { resolve } = require('./utils')
 
 /**
  * @type { webpack.Configuration }
@@ -17,13 +14,14 @@ const webpackConfig = {
   entry: './example/main.js',
   output: {
     path: resolve('./example/dist'),
-    filename: '[name].[hash:7].js',
+    filename: '[name].[hash:7].js'
   },
   resolve: {
     alias: {
+      root: resolve(),
       vue$: 'vue/dist/vue.esm.js',
       '@': resolve('./src'),
-      'example': resolve('./example/src')
+      example: resolve('./example/src')
     },
     extensions: ['*', '.js', '.vue', '.json']
   },
@@ -104,7 +102,7 @@ const webpackConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './example/index.html',
+      template: './example/index.html'
     }),
     new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
@@ -133,6 +131,6 @@ const webpackConfig = {
     minimizer: []
   },
   devtool: '#eval-source-map'
-};
+}
 
-module.exports = webpackConfig;
+module.exports = webpackConfig

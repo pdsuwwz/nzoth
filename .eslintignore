@@ -1,4 +1,3 @@
-build/*.js
 config/*.js
 node_modules/*.js
 public/stat_log.js

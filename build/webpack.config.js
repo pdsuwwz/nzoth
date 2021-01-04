@@ -1,12 +1,9 @@
-const path = require('path')
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const notifier = require('node-notifier')
 
-function resolve (dir) {
-  return path.join(process.cwd(), dir)
-}
+const { resolve } = require('./utils')
 
 /**
  * @type { webpack.Configuration }
@@ -107,6 +104,7 @@ module.exports = {
   },
   resolve: {
     alias: {
+      root: resolve(),
       vue$: 'vue/dist/vue.esm.js',
       '@': resolve('src')
     },
