@@ -76,6 +76,7 @@ const webpackConfig = {
         exclude: /node_modules/,
         options: {
           limit: 10000,
+          esModule: false,
           name: '[name].[hash:7].[ext]'
         }
       },
@@ -95,6 +96,14 @@ const webpackConfig = {
         options: {
           limit: 10000,
           name: '[name].[hash:7].[ext]'
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|webp|woff2?|eot|ttf|otf|mp4|webm|ogg|mp3|wav|flac|aac)(\?\S*)?$/,
+        loader: 'file-loader',
+        include: /node_modules/,
+        options: {
+          name: '[name].[ext]?[hash]'
         }
       }
     ]
