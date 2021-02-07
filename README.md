@@ -71,7 +71,7 @@ http://localhost:8080/example-page
         └── type.js
 ```
 
-由此我们知道，开发和测试时分开的：
+由此我们知道，开发和测试是分开的：
 
 即我们会在 `src` 中开发组件库，在 `example` 中测试组件库
 
