@@ -134,7 +134,7 @@ $ npm run build
 
 ## 注册并登录 Npm 账号
 
-首先需要提前注册下 Npm 账号 https://www.npmjs.com/signup
+首先需要提前注册下 Npm 账号 https://docs.npmjs.com/creating-a-new-npm-user-account
 
 注册完后在终端登录 Npm 账号：
 
