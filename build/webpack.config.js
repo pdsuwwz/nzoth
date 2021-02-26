@@ -10,7 +10,7 @@ const { resolve } = require('./utils')
  */
 module.exports = {
   mode: 'production',
-  entry: './src/main.js',
+  entry: resolve('./src/main.js'),
   output: {
     path: resolve('./lib'),
     publicPath: '/lib/',
@@ -114,7 +114,6 @@ module.exports = {
   resolve: {
     alias: {
       root: resolve(),
-      vue$: 'vue/dist/vue.esm.js',
       '@': resolve('src')
     },
     extensions: ['*', '.js', '.vue', '.json']
@@ -130,6 +129,13 @@ module.exports = {
     hints: false
   },
   devtool: 'source-map',
+  externals: {
+    vue: {
+      root: 'Vue',
+      commonjs: 'vue',
+      commonjs2: 'vue'
+    }
+  },
   plugins: [
     new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({

@@ -15,14 +15,16 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'MyComponent',
   methods: {
     handleClick (button) {
       alert(`自定义组件 ${button}`)
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>

@@ -2,7 +2,7 @@ const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 const notifier = require('node-notifier')
-const VueLoaderPlugin = require('vue-loader/lib/plugin')
+const { VueLoaderPlugin } = require('vue-loader')
 
 const { resolve } = require('./utils')
 
@@ -19,7 +19,7 @@ const webpackConfig = {
   resolve: {
     alias: {
       root: resolve(),
-      vue$: 'vue/dist/vue.esm.js',
+      vue$: 'vue/dist/vue.esm-bundler.js',
       '@': resolve('./src'),
       example: resolve('./example/src')
     },

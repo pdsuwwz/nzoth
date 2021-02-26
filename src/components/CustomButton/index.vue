@@ -9,7 +9,13 @@
 </template>
 
 <script>
-export default {
+import {
+  computed,
+  defineComponent,
+  reactive
+} from 'vue'
+
+export default defineComponent({
   name: 'CustomButton',
   props: {
     type: {
@@ -17,12 +23,18 @@ export default {
       default: ''
     }
   },
-  computed: {
-    getType () {
+  emits: ['click'],
+  setup (props) {
+    const getType = computed(() => {
       const list = ['primary']
-      return list.includes(this.type)
-        ? this.type
+      const { type } = reactive(props)
+      return list.includes(type)
+        ? type
         : ''
+    })
+
+    return {
+      getType
     }
   },
   methods: {
@@ -30,7 +42,7 @@ export default {
       this.$emit('click')
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
