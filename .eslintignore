@@ -4,3 +4,4 @@ public/stat_log.js
 src/utils/wysihtml5.js
 src/utils/bus.js
 src/assets/fonts/*.js
+lib/*
