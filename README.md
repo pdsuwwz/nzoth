@@ -15,7 +15,7 @@
 * 首先需要通过 git 将 Nzoth 仓库 clone 下来 :
 
 ```bash
-$ git clone https://github.com/pdsuwwz/nzoth.git
+$ git clone -b vue3.0 https://github.com/pdsuwwz/nzoth.git
 ```
 
 * 运行以下命令并等待所有的依赖包安装完毕
@@ -96,7 +96,7 @@ import CustomPackage from '@/main'
 Vue.use(CustomPackage)
 ```
 
-具体可查看该文件：[/example/main.js](https://github.com/pdsuwwz/nzoth/blob/1382f8d5092f9826d043263217bdce4b33b79483/example/main.js)
+具体可查看该文件：[/example/main.js](https://github.com/pdsuwwz/nzoth/blob/vue3.0/example/main.js)
 
 
 __使用：__
