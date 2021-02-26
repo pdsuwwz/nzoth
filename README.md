@@ -2,6 +2,10 @@
 
 🦑 Nzoth 是一个用于快速构建自己的 vue 组件库的基础模板框架
 
+## 版本
+
+* Vue 2.0 版本 ｜ [Vue 3.0 版本](https://github.com/pdsuwwz/nzoth/tree/vue3.0)
+
 ## 依赖支持
 
 * Vue 2.6.0+
