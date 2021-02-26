@@ -28,6 +28,14 @@ export function isString (obj) {
   return toString.call(obj) === '[object String]'
 }
 
+export function isUndefined (obj) {
+  return toString.call(obj) === '[object Undefined]'
+}
+
+export function isNull (obj) {
+  return toString.call(obj) === '[object Null]'
+}
+
 export function isNumberical (obj) {
   return (typeof (obj) === 'number' || typeof (obj) === 'string') && !isNaN(obj - parseFloat(obj))
 }

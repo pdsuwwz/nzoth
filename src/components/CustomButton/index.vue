@@ -9,7 +9,9 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   name: 'CustomButton',
   props: {
     type: {
@@ -17,6 +19,7 @@ export default {
       default: ''
     }
   },
+  emits: ['click'],
   computed: {
     getType () {
       const list = ['primary']
@@ -30,7 +33,7 @@ export default {
       this.$emit('click')
     }
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
