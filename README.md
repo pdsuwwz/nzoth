@@ -91,9 +91,14 @@ http://localhost:8080/example-page
 __只需要做的就是进入 `/example/main.js` 目录，将做好的 `CustomButton.vue` 注册为全局组件即可:__
 
 ```js
+import { createApp } from 'vue'
 import CustomPackage from '@/main'
+import App from './App.vue'
 
-Vue.use(CustomPackage)
+createApp(App)
+  .use(CustomPackage)
+  .mount('#app')
+
 ```
 
 具体可查看该文件：[/example/main.js](https://github.com/pdsuwwz/nzoth/blob/vue3.0/example/main.js)
