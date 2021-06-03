@@ -63,11 +63,24 @@ const webpackConfig = {
         }
       },
       {
-        test: /\.(scss|css)$/,
+        test: /\.css$/,
+        use: [
+          'vue-style-loader',
+          'css-loader'
+        ]
+      },
+      {
+        test: /\.s(c|a)ss$/,
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',
+            options: {
+              // Prefer `dart-sass`
+              implementation: require('sass')
+            }
+          }
         ]
       },
       {
