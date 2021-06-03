@@ -3,6 +3,16 @@
     <h1>{{ title }}</h1>
     <MyComponent />
   </div>
+  <x-button
+    type="primary"
+    class="git"
+    size="lg"
+    icon="x-icon-eye"
+    round
+    plain
+  >
+    Watch
+  </x-button>
 </template>
 
 <script>
@@ -25,6 +35,8 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .example-page-container {
+  --color: 250, 0, 0;
   padding: 20px;
+  color: rgb(var(--color), 0.4)
 }
 </style>
