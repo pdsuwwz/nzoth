@@ -17,6 +17,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .example-page-container {
+  --color: 255, 0, 0;
   padding: 20px;
+  color: rgb(var(--color), 0.4)
 }
 </style>
