@@ -4,7 +4,7 @@
 
 ## 版本
 
-* Vue 2.0 版本 ｜ [Vue 3.0 版本](https://github.com/pdsuwwz/nzoth/tree/vue3.0)
+* Vue 2.0 版本 ｜ [Vue 3.0 版本](https://github.com/pdsuwwz/nzoth)
 
 ## 依赖支持
 
@@ -15,7 +15,7 @@
 * 首先需要通过 git 将 Nzoth 仓库 clone 下来 :
 
 ```bash
-$ git clone https://github.com/pdsuwwz/nzoth.git
+$ git clone -b vue2.0 https://github.com/pdsuwwz/nzoth.git
 ```
 
 * 运行以下命令并等待所有的依赖包安装完毕
