@@ -29,6 +29,8 @@ const webpackConfig = {
     quiet: true,
     hot: true,
     open: true,
+    port: 8000,
+    historyApiFallback: true,
     openPage: 'example-page'
   },
   performance: {
@@ -122,7 +124,7 @@ const webpackConfig = {
     ]
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+    new webpack.HotModuleReplacementPlugin({}),
     new HtmlWebpackPlugin({
       template: './example/index.html'
     }),
@@ -152,7 +154,7 @@ const webpackConfig = {
   optimization: {
     minimizer: []
   },
-  devtool: '#eval-source-map'
+  devtool: 'eval-source-map'
 }
 
 module.exports = webpackConfig
