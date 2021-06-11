@@ -3,16 +3,16 @@
     <h1>{{ title }}</h1>
     <MyComponent />
   </div>
-  <x-button
+  <fm-button
     type="primary"
     class="git"
     size="lg"
-    icon="x-icon-eye"
+    icon="fm-icon-eye"
     round
     plain
   >
     Watch
-  </x-button>
+  </fm-button>
 </template>
 
 <script>
