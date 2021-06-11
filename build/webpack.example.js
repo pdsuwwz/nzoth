@@ -14,7 +14,7 @@ const webpackConfig = {
   entry: './example/main.js',
   output: {
     path: resolve('./example/dist'),
-    filename: '[name].[hash:7].js'
+    filename: '[name].[fullhash:7].js'
   },
   resolve: {
     alias: {
@@ -22,8 +22,12 @@ const webpackConfig = {
       vue$: 'vue/dist/vue.esm-bundler.js',
       '@': resolve('./src'),
       example: resolve('./example/src')
+      // Non-essential, turn it on when using npm link
+      // vue: resolve('./node_modules/vue')
     },
     extensions: ['*', '.js', '.vue', '.json']
+    // Non-essential, turn it on when using npm link
+    // symlinks: false
   },
   devServer: {
     quiet: true,
@@ -92,7 +96,7 @@ const webpackConfig = {
         options: {
           limit: 10000,
           esModule: false,
-          name: '[name].[hash:7].[ext]'
+          name: '[name].[fullhash:7].[ext]'
         }
       },
       {
@@ -101,7 +105,7 @@ const webpackConfig = {
         exclude: /node_modules/,
         options: {
           limit: 10000,
-          name: '[name].[hash:7].[ext]'
+          name: '[name].[fullhash:7].[ext]'
         }
       },
       {
@@ -110,7 +114,7 @@ const webpackConfig = {
         exclude: /node_modules/,
         options: {
           limit: 10000,
-          name: '[name].[hash:7].[ext]'
+          name: '[name].[fullhash:7].[ext]'
         }
       },
       {
@@ -118,7 +122,7 @@ const webpackConfig = {
         loader: 'file-loader',
         include: /node_modules/,
         options: {
-          name: '[name].[ext]?[hash]'
+          name: '[name].[ext]?[fullhash]'
         }
       }
     ]
