@@ -78,7 +78,7 @@ module.exports = {
         options: {
           limit: 10000,
           esModule: false,
-          name: '[name].[hash:7].[ext]'
+          name: '[name].[fullhash:7].[ext]'
         }
       },
       {
@@ -87,7 +87,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           limit: 10000,
-          name: '[name].[hash:7].[ext]'
+          name: '[name].[fullhash:7].[ext]'
         }
       },
       {
@@ -96,7 +96,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           limit: 10000,
-          name: '[name].[hash:7].[ext]'
+          name: '[name].[fullhash:7].[ext]'
         }
       },
       {
@@ -104,7 +104,7 @@ module.exports = {
         loader: 'file-loader',
         include: /node_modules/,
         options: {
-          name: '[name].[ext]?[hash]'
+          name: '[name].[ext]?[fullhash]'
         }
       }
     ]
