@@ -11,6 +11,7 @@ const { resolve } = require('./utils')
  */
 const webpackConfig = {
   mode: process.env.NODE_ENV,
+  target: 'web',
   entry: './example/main.js',
   output: {
     path: resolve('./example/dist'),

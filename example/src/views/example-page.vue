@@ -3,20 +3,10 @@
     <h1>{{ title }}</h1>
     <MyComponent />
   </div>
-  <fm-button
-    type="primary"
-    class="git"
-    size="lg"
-    icon="fm-icon-eye"
-    round
-    plain
-  >
-    Watch
-  </fm-button>
 </template>
 
 <script>
-import MyComponent from 'example/components/MyComponent'
+import MyComponent from 'example/components/MyComponent.vue'
 
 import { defineComponent, ref } from 'vue'
 
