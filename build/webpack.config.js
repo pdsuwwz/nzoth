@@ -11,6 +11,7 @@ const { resolve } = require('./utils')
 module.exports = {
   mode: 'production',
   entry: resolve('./src/main.js'),
+  stats: 'minimal',
   output: {
     path: resolve('./lib'),
     publicPath: '/lib/',
