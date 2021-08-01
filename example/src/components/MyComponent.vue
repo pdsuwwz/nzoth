@@ -10,6 +10,7 @@
       @click="handleClick('Button 2')"
     >
       Button 2
+      <i class="iconfont icon-nzothfavorite"></i>
     </CustomButton>
   </div>
 </template>
