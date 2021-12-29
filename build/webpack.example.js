@@ -1,8 +1,7 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
-const notifier = require('node-notifier')
 const { VueLoaderPlugin } = require('vue-loader')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 const { resolve } = require('./utils')
 
@@ -43,12 +42,6 @@ const webpackConfig = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(vue|jsx?)$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader'
-      },
       {
         test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
@@ -129,6 +122,7 @@ const webpackConfig = {
     ]
   },
   plugins: [
+    new ESLintPlugin(),
     new webpack.HotModuleReplacementPlugin({}),
     new HtmlWebpackPlugin({
       template: './example/index.html'
@@ -139,20 +133,6 @@ const webpackConfig = {
         compilerOptions: {
           preserveWhitespace: false
         }
-      }
-    }),
-    new FriendlyErrorsWebpackPlugin({
-      clearConsole: false,
-      onErrors: (severity, errors) => {
-        if (severity !== 'error') {
-          return
-        }
-        const error = errors[0]
-        notifier.notify({
-          title: 'Webpack error',
-          message: `${severity}: ${error.name}`,
-          subtitle: error.file || ''
-        })
       }
     })
   ],

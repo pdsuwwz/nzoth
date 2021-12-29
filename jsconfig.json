@@ -3,6 +3,7 @@
     "baseUrl": "./",
     "module": "commonjs",
     "paths": {
+      "root/*": ["./*"],
       "@/*": ["./src/*"],
       "example/*": ["./example/src/*"]
     }

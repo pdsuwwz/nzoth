@@ -1,7 +1,6 @@
 const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
-const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
-const notifier = require('node-notifier')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 const { resolve } = require('./utils')
 
@@ -20,19 +19,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(vue|js)(\?.*)?$/,
-        loader: 'eslint-loader',
-        include: resolve('src'),
-        options: {
-          fix: true,
-          failOnError: true,
-          useEslintrc: true,
-          configFile: resolve('.eslintrc.js'),
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
       {
         test: /\.css$/,
         use: [
@@ -136,23 +122,10 @@ module.exports = {
     }
   },
   plugins: [
+    new ESLintPlugin(),
     new VueLoaderPlugin(),
     new webpack.LoaderOptionsPlugin({
       minimize: true
-    }),
-    new FriendlyErrorsWebpackPlugin({
-      clearConsole: false,
-      onErrors: (severity, errors) => {
-        if (severity !== 'error') {
-          return
-        }
-        const error = errors[0]
-        notifier.notify({
-          title: 'Webpack error',
-          message: `${severity}: ${error.name}`,
-          subtitle: error.file || ''
-        })
-      }
     })
   ]
 }
