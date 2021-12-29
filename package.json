@@ -1,6 +1,6 @@
 {
   "name": "nzoth",
-  "version": "0.0.1",
+  "version": "0.2.1",
   "main": "lib/lib-index.js",
   "description": "🦑 Fast building Vue 3.x component library. Build supported Webpack 5",
   "author": "Wisdom <pdsu.wwz@foxmail.com>",
