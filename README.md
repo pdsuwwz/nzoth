@@ -4,11 +4,11 @@
 
 ## 版本
 
-* Vue 3.0 版本 ｜ [Vue 2.0 版本](https://github.com/pdsuwwz/nzoth/tree/vue2.0)
+* Vue 3.x 版本 ｜ [Vue 2.x 版本](https://github.com/pdsuwwz/nzoth/tree/vue2.0)
 
 ## 依赖支持
 
-* Vue 3.0.x
+* Vue 3.x
 
 ## 安装
 
