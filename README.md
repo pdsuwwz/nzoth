@@ -4,7 +4,7 @@
 
 ## 版本
 
-* Vue 2.0 版本 ｜ [Vue 3.0 版本](https://github.com/pdsuwwz/nzoth)
+* Vue 2.x 版本 ｜ [Vue 3.x 版本](https://github.com/pdsuwwz/nzoth)
 
 ## 依赖支持
 
