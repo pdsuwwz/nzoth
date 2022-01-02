@@ -38,7 +38,7 @@ $ npm run dev:example
 
 执行完毕后，不出意外的话会自动拉取浏览器并打开下方链接: 
 
-http://localhost:8080/example-page
+http://localhost:8080/
 
 
 接下来进一步了解下组件 src、example 示例 这两者是怎么通过示例页面呈现出来的。
@@ -60,7 +60,7 @@ http://localhost:8080/example-page
 │   └── src
 │       ├── components
 │       └── views
-├── lib # 构建后的输出目录（打包构建后才会生成）
+├── lib # 打包完成后的输出目录（打包构建后才会生成）
 │   ├── lib-index.js
 │   └── lib-index.js.map
 └── src # 编写组件库的目录
