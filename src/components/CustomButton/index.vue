@@ -24,7 +24,7 @@ export default defineComponent({
     }
   },
   emits: ['click'],
-  setup (props) {
+  setup (props, { emit }) {
     const getType = computed(() => {
       const list = ['primary']
       const { type } = reactive(props)
@@ -33,13 +33,13 @@ export default defineComponent({
         : ''
     })
 
-    return {
-      getType
+    const handleClick = () => {
+      emit('click')
     }
-  },
-  methods: {
-    handleClick () {
-      this.$emit('click')
+
+    return {
+      getType,
+      handleClick
     }
   }
 })

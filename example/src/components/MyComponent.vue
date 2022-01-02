@@ -19,9 +19,12 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'MyComponent',
-  methods: {
-    handleClick (button) {
+  setup () {
+    const handleClick = (button) => {
       alert(`自定义组件 ${button}`)
+    }
+    return {
+      handleClick
     }
   }
 })

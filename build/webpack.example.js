@@ -30,12 +30,9 @@ const webpackConfig = {
     // symlinks: false
   },
   devServer: {
-    quiet: true,
-    hot: true,
     open: true,
     port: 8000,
-    historyApiFallback: true,
-    openPage: 'example-page'
+    historyApiFallback: true
   },
   performance: {
     hints: false
@@ -123,7 +120,6 @@ const webpackConfig = {
   },
   plugins: [
     new ESLintPlugin(),
-    new webpack.HotModuleReplacementPlugin({}),
     new HtmlWebpackPlugin({
       template: './example/index.html'
     }),
@@ -134,6 +130,10 @@ const webpackConfig = {
           preserveWhitespace: false
         }
       }
+    }),
+    new webpack.DefinePlugin({
+      __VUE_OPTIONS_API__: false,
+      __VUE_PROD_DEVTOOLS__: false
     })
   ],
   optimization: {
