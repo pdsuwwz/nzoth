@@ -55,6 +55,7 @@ http://localhost:8080/
 ├── example # 编写测试用例的目录，方便实时预览当前开发的组件库
 │   ├── App.vue
 │   ├── index.html
+│   ├── favicon.svg
 │   ├── main.js
 │   ├── router.js
 │   └── src
