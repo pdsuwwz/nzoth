@@ -121,6 +121,7 @@ const webpackConfig = {
   plugins: [
     new ESLintPlugin(),
     new HtmlWebpackPlugin({
+      favicon: './example/favicon.svg',
       template: './example/index.html'
     }),
     new VueLoaderPlugin(),
