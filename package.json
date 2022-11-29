@@ -43,7 +43,7 @@
     "@babel/runtime-corejs2": "^7.17.2",
     "@vue/compiler-sfc": "^3.2.31",
     "@vue/eslint-config-standard": "^6.1.0",
-    "babel-loader": "^8.2.3",
+    "babel-loader": "^9.0.0",
     "core-js": "^3.21.1",
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",

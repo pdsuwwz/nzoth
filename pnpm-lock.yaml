@@ -22,7 +22,7 @@ specifiers:
   '@babel/runtime-corejs2': ^7.17.2
   '@vue/compiler-sfc': ^3.2.31
   '@vue/eslint-config-standard': ^6.1.0
-  babel-loader: ^8.2.3
+  babel-loader: ^9.0.0
   core-js: ^3.21.1
   cross-env: ^7.0.3
   css-loader: ^6.7.1
@@ -70,7 +70,7 @@ devDependencies:
   '@babel/runtime-corejs2': 7.17.2
   '@vue/compiler-sfc': 3.2.31
   '@vue/eslint-config-standard': 6.1.0_563b866155e166be145aabf943f2f36c
-  babel-loader: 8.2.3_ed870ac3ba52c4ec230ba2bc3dbb311c
+  babel-loader: 9.1.0_ed870ac3ba52c4ec230ba2bc3dbb311c
   core-js: 3.21.1
   cross-env: 7.0.3
   css-loader: 6.7.1_webpack@5.70.0
@@ -2074,18 +2074,16 @@ packages:
     resolution: {integrity: sha512-Td525n+iPOOyUQIeBfcASuG6uJsDOITl7Mds5gFyerkWiX7qhUTdYUBlSgNMyVqtSJqwpt1kXGLdUt6SykLMRA==}
     dev: true
 
-  /babel-loader/8.2.3_ed870ac3ba52c4ec230ba2bc3dbb311c:
-    resolution: {integrity: sha512-n4Zeta8NC3QAsuyiizu0GkmRcQ6clkV9WFUnUf1iXP//IeSKbWjofW3UHyZVwlOB4y039YQKefawyTn64Zwbuw==}
-    engines: {node: '>= 8.9'}
+  /babel-loader/9.1.0_ed870ac3ba52c4ec230ba2bc3dbb311c:
+    resolution: {integrity: sha512-Antt61KJPinUMwHwIIz9T5zfMgevnfZkEVWYDWlG888fgdvRRGD0JTuf/fFozQnfT+uq64sk1bmdHDy/mOEWnA==}
+    engines: {node: '>= 14.15.0'}
     peerDependencies:
-      '@babel/core': ^7.0.0
-      webpack: '>=2'
+      '@babel/core': ^7.12.0
+      webpack: '>=5'
     dependencies:
       '@babel/core': 7.17.5
       find-cache-dir: 3.3.2
-      loader-utils: 1.4.0
-      make-dir: 3.1.0
-      schema-utils: 2.7.1
+      schema-utils: 4.0.0
       webpack: 5.70.0_webpack-cli@5.0.0
     dev: true
 
@@ -2351,7 +2349,7 @@ packages:
     dev: true
 
   /commondir/1.0.1:
-    resolution: {integrity: sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=}
+    resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
     dev: true
 
   /compressible/2.0.18:
@@ -3279,7 +3277,7 @@ packages:
     dev: true
 
   /find-up/2.1.0:
-    resolution: {integrity: sha1-RdG35QbHF93UgndaK3eSCjwMV6c=}
+    resolution: {integrity: sha512-NWzkk0jSJtTt08+FBFMvXoeZnOJD+jTtsRmBYbAIzJdX6l7dLgR7CTubCM5/eDdPUBvLCeVasP1brfVR/9/EZQ==}
     engines: {node: '>=4'}
     dependencies:
       locate-path: 2.0.0
@@ -4768,15 +4766,6 @@ packages:
       chokidar: 3.5.3
       immutable: 4.0.0
       source-map-js: 1.0.2
-    dev: true
-
-  /schema-utils/2.7.1:
-    resolution: {integrity: sha512-SHiNtMOUGWBQJwzISiVYKu82GiV4QYGePp3odlY1tuKO7gPtphAT5R/py0fA6xtbgLL/RvtJZnU9b8s0F1q0Xg==}
-    engines: {node: '>= 8.9.0'}
-    dependencies:
-      '@types/json-schema': 7.0.9
-      ajv: 6.12.6
-      ajv-keywords: 3.5.2_ajv@6.12.6
     dev: true
 
   /schema-utils/3.1.1:
